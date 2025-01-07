@@ -1,0 +1,98 @@
+body {
+  background: black;
+}
+
+#containerr {
+  background-image: url(cbg.jpg);
+  border: 10px outset white;
+  border-radius: 5px;
+  height: 1000px;
+  margin-left: 370px;
+  margin-right: 370px;
+}
+header {
+  height: 100px;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  opacity: 0.5;
+  border: 1px none rgba(0, 0, 0, 0);
+  border-radius: 100px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: red;
+  height: 20px;
+}
+
+li {
+  float: left;
+  margin-left: 100px;
+}
+
+nav {
+    height: 1000px; 
+    border-radius: 10px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+  background-color: red;
+  height: 80px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+
+ul {
+  background-color: red; 
+  height: 80px;
+  
+}
+
+.kepek {
+  height: auto; 
+  display: inline-block; 
+  width: 300px; 
+  height: 300px;
+  object-fit: cover;
+  margin: 100px; 
+  border: 3px solid #700808;
+  border-radius: 3px; 
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kep {
+ margin-left: 350px;
+ height: 400px;
+ width: 400px;
+ border: #700808 inset 2px;
+ border-radius: 6px;
+}
+
+p {
+  margin-left: 100px;
+  background-color: rgba(255, 255,255, 0.7);
+  margin-right: 100px;
+  font-size: large;
+}
+
+button {
+  background-color: gray;
+}
