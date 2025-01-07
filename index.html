@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnderGroundRappers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="logo.png" alt="Logo" id="logo">
+    <div id="containerr">
+        <header>
+            <nav>
+                <ul>
+                    <li><button id="recommendation-btn" onclick="redirectToRandomPage">Ajánló</button></li>
+                    <li>
+                        <select id="filter" onchange="applyFilter()">
+                            <option value="all">Minden</option>
+                            <option value="popular">Népszerű</option>
+                            <option value="unpopular">Kevésbé népszerű</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main-container">  
+            <a href="nettspend.html"><img src="nettspend.jpg" alt="" class="kepek"></a>
+            <a href="osamason.html"><img src="osamason.jpg" alt="" class="kepek"></a>
+            <a href="che.html"><img src="che.jpg" alt="" class="kepek"></a>
+        </main>
+    </div>
+    <script src="program.js"></script>
+</body>
+</html>
