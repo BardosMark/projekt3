@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UnderGroundRappers</title>
+    <title>Nettspend</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,22 +13,13 @@
             <nav>
                 <ul>
                     <li><button id="recommendation-btn" onclick="redirectToRandomPage">Ajánló</button></li>
-                    <li>
-                        <select id="filter" onchange="applyFilter()">
-                            <option value="all">Minden</option>
-                            <option value="popular">Népszerű</option>
-                            <option value="unpopular">Kevésbé népszerű</option>
-                        </select>
-                    </li>
+                    
                 </ul>
             </nav>
         </header>
         <main>  
             <img src="nettspend2.jpg" alt="" class="kep">
-            <p>Nev: Nettspend</p>
-            <p>Hallgatók: 1.700.000</p>
-            <p>Születés: 2007</p>
-            <p>Legnépszerűbb zene: We Not Like You</p>
+            <div id="artist-container"></div>
         </main>
     </div>
     <script src="program.js"></script>
