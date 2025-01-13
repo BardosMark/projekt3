@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UnderGroundRappers</title>
+    <title>Che</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,23 +13,13 @@
             <nav>
                 <ul>
                     <li><button id="recommendation-btn" onclick="redirectToRandomPage">Ajánló</button></li>
-                    <li>
-                        <select id="filter" onchange="applyFilter()">
-                            <option value="all">Minden</option>
-                            <option value="popular">Népszerű</option>
-                            <option value="unpopular">Kevésbé népszerű</option>
-                        </select>
-                    </li>
+                    
                 </ul>
             </nav>
         </header>
         <main>  
             <img src="che2.jpg" alt="" class="kep">
-            <p>Nev: Che</p>
-            <p>Hallgatók: 600000</p>
-            <p>Születés: 2004</p>
-            <p>Legnépszerűbb zene: agenda</p>
-        </main>
+            <div id="artist-container"></div>
     </div>
     <script src="program.js"></script>
 </body>
