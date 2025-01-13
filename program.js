@@ -73,33 +73,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 const artists = [
-    { name: "Nettspend", listeners: 1700000, image: "nettspend.jpg", link: "nettspend.html" },
-    { name: "Osamason", listeners: 1300000, image: "osamason.jpg", link: "osamason.html" },
-    { name: "Che", listeners: 600000, image: "che.jpg", link: "che.html" }
+    {
+        name: "Nettspend",
+        listeners: 1700000,
+        birth: 2007,
+        mostPopularSong: "We Not Like You"
+    },
+    {
+        name: "Osamason",
+        listeners: 1300000,
+        birth: 2003,
+        mostPopularSong: "pop"
+    },
+    {
+        name: "Che",
+        listeners: 600000,
+        birth: 2004,
+        mostPopularSong: "agenda"
+    }
 ];
+
+const currentArtistName = document.title;
+const artist = artists.find(a => a.name === currentArtistName);
+const artistContainer = document.getElementById('artist-container');
+
+if (artist) {
+    artistContainer.innerHTML = `
+        <div class="artist">
+            <h2>${artist.name}</h2>
+            <p><strong>Listeners:</strong> ${artist.listeners.toLocaleString()}</p>
+            <p><strong>Birth:</strong> ${artist.birth}</p>
+            <p><strong>Most Popular Song:</strong> ${artist.mostPopularSong}</p>
+        </div>
+    `;
+} else {
+    artistContainer.innerHTML = `<p>Artist not found.</p>`;
+}
 
 function applyFilter() {
     const filter = document.getElementById("filter").value;
-    const mainContainer = document.querySelector("main");
+    const allImages = document.querySelectorAll(".kepek");
 
-  
-    mainContainer.innerHTML = "";
-
-   
-    let filteredArtists;
-    if (filter === "popular") {
-        filteredArtists = artists.filter(artist => artist.listeners >= 1000000); // Popular artists
-    } else if (filter === "unpopular") {
-        filteredArtists = artists.filter(artist => artist.listeners < 1000000); // Less popular artists
-    } else {
-        filteredArtists = artists; 
-    }
-
-   
-    filteredArtists.forEach(artist => {
-        const artistElement = document.createElement("a");
-        artistElement.href = artist.link;
-        artistElement.innerHTML = `<img src="${artist.image}" alt="${artist.name}" class="kepek">`;
-        mainContainer.appendChild(artistElement);
+    allImages.forEach(img => {
+        img.style.display = "block"; 
     });
+
+    if (filter === "popular") {
+        allImages.forEach(img => {
+            if (!img.src.includes("nettspend.jpg")) {
+                img.style.display = "none"; 
+            }
+        });
+    } else if (filter === "unpopular") {
+        allImages.forEach(img => {
+            if (!img.src.includes("che.jpg")) {
+                img.style.display = "none"; 
+            }
+        });
+    }
 }
+
